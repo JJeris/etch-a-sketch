@@ -50,7 +50,7 @@ function paintGrid(){
     
     divs.forEach((div) => 
     div.addEventListener(('mouseover'), () => {
-        div.style.backgroundColor = 'black';
+        div.classList.add('coloured');
     }));
 
 }
