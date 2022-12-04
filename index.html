@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <title>Etch A Sketch | JJeris</title>
 </head>
@@ -13,32 +14,42 @@
             <h1 class="logo">Etch-a-sketch</h1>
         </div>
     </header>
-    <main class="container">
+    <main>  
+        <section class="flex-container">
+            <div><h1>Sketch-pad</h1></div>
+            <div class="content">
+                <div class="board"></div>
+                <div class="options">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                </div>
+                <div>
+                    <input type="number" placeholder="Size" value="16" id="size" onchange="changeSize(this.value)">
+                    <button>Set Size</button>
+                </div>
+            </div>
 
-    <!-- <div class="row">
-        <div class="column">1</div>
-        <div class="column">2</div>
-        <div class="column">3</div>
-        <div class="column">4</div>
-        <div class="column">5</div>
-        <div class="column">6</div>
-        <div class="column">7</div>
-        <div class="column">8</div>
-        <div class="column">9</div>
-        <div class="column">10</div>
-        <div class="column">11</div>
-        <div class="column">12</div>
-        <div class="column">13</div>
-        <div class="column">14</div>
-        <div class="column">15</div>
-        <div class="column">16</div>
-    </div> -->
+        </section>
 
 
     </main>
     <footer>
 
     </footer>
-    <script src="main.js"></script>
+
 </body>
+<script src="main.js"></script>
 </html>
+
+
+<!-- <form action="">
+    <input type="number" placeholder="Size" id="size">
+    <button onclick="changeSize()">Change Size</button>      
+</form>
+    <section class="container">
+
+    </section>
+
+ -->
