@@ -1,4 +1,10 @@
 let color = "black";
+let click = false;
+
+function changeColor(choice) {
+    color = choice;
+}
+
 
 function getDiv() {
     /* Create a div with a class of 'grid-div'. */ 
@@ -31,32 +37,64 @@ function deleteBoard() {
 }
 
 function colorSquare() {
-    this.style.backgroundColor = color;
+
+    if (click == true){
+        if (color === 'random'){
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        }
+        else {
+            this.style.backgroundColor = color;
+        }
+    }
 }
 
-function aaa(square) {
-    // square.addEventListener("mouseover", ()=> {
+function hoverSquare(square) {
+    square.addEventListener("mouseover", colorSquare);
+
+        // square.addEventListener("mouseover", ()=> {
     //     square.style.backgroundColor = color;
 
     // });
-    square.addEventListener("mouseover", colorSquare);
+}
+
+function clickSquare(square) {
+    square.addEventListener("click", colorSquare);
+}
+
+function resetBoard() {
+    const board = document.querySelector(".board");
+    let squares = board.querySelectorAll(".grid-div");
+    squares.forEach((div) => div.style.backgroundColor = "white");
 }
 
 function populateBoard(size = 16) {
     const board = document.querySelector(".board");
-    let squares = board.querySelectorAll("div");
-    squares.forEach((div) => div.remove());
+    // let squares = board.querySelectorAll("div");
+    // squares.forEach((div) => div.remove());
+    deleteBoard();
     
     board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     for (let i = 0; i < size*size; i++) {
         let square = getDiv();
-        aaa(square);
+        clickSquare(square);
+        hoverSquare(square);
+
         square.style.backgroundColor = "white";
         board.insertAdjacentElement("beforeend", square);
     }
 }
+
+document.querySelector("body").addEventListener("mousedown", () => {
+    click = true;
+});
+
+document.querySelector("body").addEventListener("mouseup", () => {
+    click = false;
+});
+
+document.addEventListener('drag', (e) => e.preventDefault)
 
 populateBoard(16)
 
