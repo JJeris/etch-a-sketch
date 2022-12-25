@@ -12,6 +12,7 @@ function getDiv() {
     const div = document.createElement('div');
     div.classList.add('grid-div');
     div.style.backgroundColor = "white";
+    
     // div.style.border = "1px solid red";
     return div;
 }
@@ -57,9 +58,6 @@ function hoverSquare(square) {
     // });
 }
 
-function clickSquare(square) {
-    square.addEventListener("click", colorSquare);
-}
 
 function resetBoard() {
     const board = document.querySelector(".board");
@@ -78,7 +76,7 @@ function populateBoard(size = 16) {
 
     for (let i = 0; i < size*size; i++) {
         let square = getDiv();
-        clickSquare(square);
+
         hoverSquare(square);
 
         square.style.backgroundColor = "white";
@@ -86,11 +84,11 @@ function populateBoard(size = 16) {
     }
 }
 
-document.querySelector("body").addEventListener("mousedown", () => {
+document.querySelector(".board").addEventListener("mousedown", () => {
     click = true;
 });
 
-document.querySelector("body").addEventListener("mouseup", () => {
+document.querySelector(".board").addEventListener("mouseup", () => {
     click = false;
 });
 

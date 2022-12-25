@@ -2,9 +2,16 @@
     height: 500px;
     width: 500px;
     display: grid;
+    
     border: 1px solid lightgray;
+
+    /* MAKES IT SO YOU DONT SELECT SQUARES AND DRAG THEM - BREAKS THE WHOLE DRAWING FUNCTION */
+    /* -webkit-user-drag: none;  */
+    user-select: none;
     /* border-radius: 15px; */
     /* background-color:hsl(11, 11, 100); */
+    
+    
 }
 
 
