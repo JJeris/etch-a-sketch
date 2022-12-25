@@ -12,7 +12,6 @@ function getDiv() {
     const div = document.createElement('div');
     div.classList.add('grid-div');
     div.style.backgroundColor = "white";
-    
     // div.style.border = "1px solid red";
     return div;
 }
@@ -51,12 +50,16 @@ function colorSquare() {
 
 function hoverSquare(square) {
     square.addEventListener("mouseover", colorSquare);
-
+    // square.addEventListener("click", colorSquare);
         // square.addEventListener("mouseover", ()=> {
     //     square.style.backgroundColor = color;
 
     // });
+    // ['click','mouseover'].forEach( event => 
+        // square.addEventListener(event, colorSquare, true)
+    // );
 }
+
 
 
 function resetBoard() {
@@ -92,7 +95,7 @@ document.querySelector(".board").addEventListener("mouseup", () => {
     click = false;
 });
 
-document.addEventListener('drag', (e) => e.preventDefault)
+// document.addEventListener('drag', (e) => e.preventDefault)
 
 populateBoard(16)
 

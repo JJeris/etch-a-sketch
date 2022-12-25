@@ -15,29 +15,31 @@
         </div>
     </header>
     <main>  
-        <section class="flex-container">
+        <section class="work-surface">
             <div class="inner-column">
-                <div class="board">
-                </div>
                 <div class="text-content">
                     <div class="options">
+                        <div>
+                            <input type="number" placeholder="Size" value="16" id="size" onchange="changeSize(this.value)">
+                            <button>Set Size</button>
+                        </div>
                         <button onclick="changeColor('black')">Color mode</button>
                         <button onclick="changeColor('random')">Rainbow mode</button>
                         <button onclick="changeColor('white')">Eraser</button>
                         <button onclick="resetBoard()">Reset</button>
                     </div>
-                    <div>
-                        <input type="number" placeholder="Size" value="16" id="size" onchange="changeSize(this.value)">
-                        <button>Set Size</button>
-                    </div>
+                   
                 </div>
+                <div class="board"></div>
+                
+                
             </div>
         </section>
 
 
     </main>
     <footer>
-        <p>@JJeris</p>
+        <p><a href="https://github.com/JJeris">@JJeris</a></p>
     </footer>
 
 </body>
