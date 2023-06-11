@@ -2,46 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Etch A Sketch | JJeris</title>
+    
+    <title>Etch-a-sketch | JJeris</title>
 </head>
 <body>
-    <header>
-        <div class="inner-column">
-            <h1 class="logo">Etch-a-sketch</h1>
+    <main>
+        <div class="controls">
+
         </div>
-    </header>
-    <main>  
-        <section class="work-surface">
-            <div class="inner-column">
-                <div class="text-content">
-                    <div class="options">
-                        <div>
-                            <input type="number" placeholder="Size" value="16" id="size" onchange="changeSize(this.value)">
-                            <button>Set Size</button>
-                        </div>
-                        <button onclick="changeColor('black')">Color mode</button>
-                        <button onclick="changeColor('random')">Rainbow mode</button>
-                        <button onclick="changeColor('white')">Eraser</button>
-                        <button onclick="resetBoard()">Reset</button>
-                    </div>
-                   
-                </div>
-                <div class="board"></div>
-                
-                
-            </div>
-        </section>
-
-
+        <div class="grid">
+        </div>
     </main>
-    <footer>
-        <p><a href="https://github.com/JJeris">@JJeris</a></p>
-    </footer>
-
 </body>
-<script src="main.js"></script>
 </html>

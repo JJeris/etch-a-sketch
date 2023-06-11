@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+/* COLOR */
+
+html {
+    --white: #fbfbfa;
+    --darker-light-grey: #848c9e;
+    --beige-grey: #9ea2b6;
+    --light-blue: #788aae;
+    --dark-blue: #1e2752;
+    --dark-grey: #222536;
+}
+
+/*SETUP->IMAGES*/
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*SETUP->LINKS*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: blue;
+}
+
+/*...*/
+/*p a, li a, h2 a, h3 a {
+    color: blue;
+    text-decoration: underline;
+}/*
+/* IMG */
+footer .inner-column a {
+    display: block;
+    max-width: 50px;
+    max-height: auto;
+    transition: all 0.1s ease 0s;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.1s ease 0s;
+    box-sizing: border-box;
+}
+
+/*STRUCTURE*/
+
+body {
+    /*https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/*/
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /*
+    border: 3px solid orange;
+    */
+    /* overflow and bottom scroll bar*/
+    overflow-x: hidden;
+
+}
+
+main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    
+}
+
+.inner-column {
+    display: block;
+    /*border: 2px solid blue;*/
+    padding: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.board {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    
+    border: 1px solid lightgray;
+
+    /* MAKES IT SO YOU DONT SELECT SQUARES AND DRAG THEM - BREAKS THE WHOLE DRAWING FUNCTION */
+    /* -webkit-user-drag: none;  */
+    user-select: none;
+    /* border-radius: 15px; */
+    /* background-color:hsl(11, 11, 100); */
+    
+    
+}
+
+/* header, footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .work-surface .inner-column {
+    display: flex;
+} */
+
+/* .work-surface .inner-column .text-content { */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+/* } */
+
+/* .work-surface .inner-column .text-content .options{ */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* gap: 1em; */
+    /* width: 50%; */
+/* } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+header .inner-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.column {
+    flex: 1;
+
+}
+
+.grid-div{
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgrey;
+
+}
+
+.coloured {
+    background-color: black;
+} */
